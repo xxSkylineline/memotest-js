@@ -1,0 +1,12 @@
+
+table{
+    width: 450px;
+    height: 450px;
+}
+
+
+
+.tabla {
+    align-items: center;
+    border: 4px solid #000;
+}

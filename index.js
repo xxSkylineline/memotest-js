@@ -24,6 +24,7 @@ function buscarDuplas(color, ordenDeColores) {
 
   for (let i = 0; i < ordenDeColores.length; i++) {
     if (ordenDeColores[i] == color) {
+    if (ordenDeColores[i] == coloresParaCuadricula[color]) {
       cantidadRepetida++;
     }
   }

@@ -15,7 +15,8 @@ document.querySelector("#iniciador").onclick = function (event) {
 };
 
 function crearNumeroRandom(casilleros) {
-  return Math.floor(Math.random() * casilleros.length);
+  let tamanioDeCasilleros = casilleros.length;
+  return Math.floor(Math.random() * tamanioDeCasilleros);
 }
 
 function buscarDuplas(color, ordenDeColores) {

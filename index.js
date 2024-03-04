@@ -32,6 +32,9 @@ function buscarDuplas(color, ordenDeColores) {
 }
 
 
+function ingresarColorAVector(posicionDeColor) {
+  return ordenDeColores.push(coloresParaCuadricula[posicionDeColor]);
+}
 
 function crearPatronDeCuadriculas(ordenDeColores) {
   let posicionDeColor = crearNumeroRandom($casilleros);

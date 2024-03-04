@@ -1,7 +1,19 @@
+#contenedor-tabla{
+    display: flex;
+    align-items: center;
+}
 
 table{
     width: 450px;
     height: 450px;
+}
+
+.rojo{
+    background-color: red;
+}
+
+.azul{
+    background-color: blue;
 }
 
 

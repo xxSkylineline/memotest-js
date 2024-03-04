@@ -47,4 +47,18 @@ function crearPatronDeCuadriculas(ordenDeColores) {
   cantidadRepetida = buscarDuplas(posicionDeColor, ordenDeColores);
 
   return 
+  if (
+    cantidadRepetida <= maximosRepetidos &&
+    ordenDeColores.length <= $casilleros.length
+  ) {
+    ingresarColorAVector(posicionDeColor);
+  }
+
+  if (cantidadRepetida >= maximosRepetidos) {
+    posicionDeColor = crearNumeroRandom($casilleros);
+  }
+
+  console.log(ordenDeColores);
+
+  return;
 }

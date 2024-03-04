@@ -40,6 +40,10 @@ function crearPatronDeCuadriculas(ordenDeColores) {
   let posicionDeColor = crearNumeroRandom($casilleros);
   let cantidadRepetida = 0;
   
+  let posicionDeColor = crearNumeroRandom(coloresParaCuadricula);
+  let cantidadRepetida;
+  let maximosRepetidos = 1;
+
   cantidadRepetida = buscarDuplas(posicionDeColor, ordenDeColores);
 
   return 

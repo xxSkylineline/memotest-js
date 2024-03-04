@@ -10,7 +10,9 @@ const coloresParaCuadricula = [
 
 document.querySelector("#iniciador").onclick = function (event) {
   let ordenDeColores = [];
+let ordenDeColores = [];
 
+document.querySelector("#iniciador").onclick = function (event) {
   crearPatronDeCuadriculas(ordenDeColores);
 };
 

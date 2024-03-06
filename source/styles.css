@@ -16,7 +16,21 @@ table{
     background-color: blue;
 }
 
+.amarillo{
+    background-color: yellow;
+}
 
+.verde{
+    background-color: green;
+}
+
+.violeta{
+    background-color: purple;
+}
+
+.negro{
+    background-color: black;
+}
 
 .tabla {
     align-items: center;

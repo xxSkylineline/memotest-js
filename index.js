@@ -36,6 +36,16 @@ function ingresarColorAVector(posicionDeColor) {
 
 function crearPatronDeCuadriculas(ordenDeColores) {
   let posicionDeColor = crearNumeroRandom(coloresParaCuadricula);
+  
+  rellenarVectorDeColores()
+
+  agregarClaseDeColorACuadricula($casilleros, ordenDeColores);
+  turnoJugador()
+  
+}
+
+function rellenarVectorDeColores() {
+  const maximosRepetidos = 1;
   let cantidadRepetida;
   let maximosRepetidos = 1;
 

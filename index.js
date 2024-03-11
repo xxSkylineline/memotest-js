@@ -36,7 +36,6 @@ function ingresarColorAVector(posicionDeColor) {
 }
 
 function crearPatronDeCuadriculas(ordenDeColores) {
-  let posicionDeColor = crearNumeroRandom(coloresParaCuadricula);
   
   rellenarVectorDeColores()
 
@@ -48,10 +47,8 @@ function crearPatronDeCuadriculas(ordenDeColores) {
 function rellenarVectorDeColores() {
   const maximosRepetidos = 1;
   let cantidadRepetida;
-  let maximosRepetidos = 1;
   let numeroAleatorio;
 
-  cantidadRepetida = buscarDuplas(posicionDeColor, ordenDeColores);
   
 
   for(i = 0; i<$casilleros.length;){
@@ -64,7 +61,6 @@ function rellenarVectorDeColores() {
     }
   }
 
-  console.log(ordenDeColores);
 }
 
 function agregarClaseDeColorACuadricula(cuadricula, ordenDeColores) {

@@ -1,6 +1,6 @@
-#contenedor-tabla{
-    display: flex;
-    align-items: center;
+
+.centrado{
+    margin: auto;
 }
 
 table{

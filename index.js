@@ -62,6 +62,11 @@ function rellenarVectorDeColores() {
   }
 
   console.log(ordenDeColores);
+function agregarClaseDeColorACuadricula(cuadricula, ordenDeColores) {
+  for (i = 0; i < cuadricula.length; i++) {
+    cuadricula[i].classList.add(ordenDeColores[i]);
+  }
+}
 
   return;
 }

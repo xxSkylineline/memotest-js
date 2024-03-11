@@ -9,6 +9,7 @@ const coloresParaCuadricula = [
 ];
 
 let ordenDeColores = [];
+let ordenDeJugador = [];
 
 document.querySelector("#iniciador").onclick = function (event) {
   crearPatronDeCuadriculas(ordenDeColores);
@@ -48,8 +49,10 @@ function rellenarVectorDeColores() {
   const maximosRepetidos = 1;
   let cantidadRepetida;
   let maximosRepetidos = 1;
+  let numeroAleatorio;
 
   cantidadRepetida = buscarDuplas(posicionDeColor, ordenDeColores);
+  
 
   for(i = 0; i<$casilleros.length;){
     numeroAleatorio = crearNumeroRandom(coloresParaCuadricula)
@@ -62,6 +65,8 @@ function rellenarVectorDeColores() {
   }
 
   console.log(ordenDeColores);
+}
+
 function agregarClaseDeColorACuadricula(cuadricula, ordenDeColores) {
   for (i = 0; i < cuadricula.length; i++) {
     cuadricula[i].classList.add(ordenDeColores[i]);

@@ -69,5 +69,4 @@ function agregarClaseDeColorACuadricula(cuadricula, ordenDeColores) {
   }
 }
 
-  return;
 }

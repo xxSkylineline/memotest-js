@@ -73,4 +73,10 @@ function cambiaColorABlanco(cuadricula, colores){
   cuadricula.classList.remove(colores)
 
 }
+
+function crearPatronDeCuadriculas() {  
+  rellenarVectorDeColores()
+  agregarClaseDeColorACuadricula($casilleros, ordenDeColores);
+}
+
 }

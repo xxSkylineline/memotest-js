@@ -68,4 +68,9 @@ function agregarClaseDeColorACuadricula(cuadricula, ordenDeColores) {
   }
 }
 
+function cambiaColorABlanco(cuadricula, colores){
+  
+  cuadricula.classList.remove(colores)
+
+}
 }

@@ -12,8 +12,16 @@ let ordenDeColores = [];
 let ordenDeJugador = [];
 
 document.querySelector("#iniciador").onclick = function (event) {
+  let segundo = 600;
   crearPatronDeCuadriculas(ordenDeColores);
-};
+
+  $casilleros.forEach(function(cuadro, i){
+    setTimeout(() =>{
+      cambiaColorABlanco(cuadro, ordenDeColores[i]);
+    }, segundo * i);
+  })
+}
+
 
 function crearNumeroRandom(casilleros) {
   let tamanioDeCasilleros = casilleros.length;

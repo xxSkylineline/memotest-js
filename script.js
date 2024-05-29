@@ -12,19 +12,9 @@ let ordenDeColores = [];
 let ordenDeJugador = [];
 
 document.querySelector("#iniciador").onclick = function (event) {
-  let segundo = 1000;
-  crearPatronDeCuadriculas(ordenDeColores);
+  document.querySelector("#iniciador").setAttribute("disabled", "");
 
-  $casilleros.forEach((elemento, i) => {
-    setTimeout(() => {
-      agregarClaseAElelementoHTML($casilleros[i], "transicion");
-      agregarClaseAElelementoHTML($casilleros[i], ordenDeColores[i]);
-    }, segundo * (i+1));
-
-    setTimeout(() =>{
-      eliminarClaseAElementoHtml($casilleros[i], ordenDeColores[i]);
-    }, segundo * (i+2) )
-  });
+  presentarPatronDeColores();
 };
 
 function crearNumeroRandom(casilleros) {

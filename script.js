@@ -78,3 +78,23 @@ function agregarClaseAElelementoHTML(elemento, clase) {
 function eliminarClaseAElementoHtml(elemento, clase) {
   elemento.classList.remove(clase);
 }
+
+
+function presentarPatronDeColores(){
+  let segundo = 1000;
+  crearPatronDeCuadriculas(ordenDeColores);
+
+  $casilleros.forEach((elemento, i) => {
+    let segundoParaAgregarClase = segundo * (i+1);
+    let segundoParaEliminarClase = segundo * (i+2);
+
+    setTimeout(() => {
+      agregarClaseAElelementoHTML($casilleros[i], "transicion");
+      agregarClaseAElelementoHTML($casilleros[i], ordenDeColores[i]);
+    }, segundoParaAgregarClase);
+
+    setTimeout(() =>{
+      eliminarClaseAElementoHtml($casilleros[i], ordenDeColores[i]);
+    }, segundoParaEliminarClase);
+  });
+}

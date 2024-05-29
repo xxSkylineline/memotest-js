@@ -15,13 +15,17 @@ document.querySelector("#iniciador").onclick = function (event) {
   let segundo = 1000;
   crearPatronDeCuadriculas(ordenDeColores);
 
-  /* $casilleros.forEach(function(cuadro, i){
-    setTimeout(() =>{
-      cambiaColorABlanco(cuadro, ordenDeColores[i]);
-    }, segundo * i);
-  }) */
-}
+  $casilleros.forEach((elemento, i) => {
+    setTimeout(() => {
+      agregarClaseAElelementoHTML($casilleros[i], "transicion");
+      agregarClaseAElelementoHTML($casilleros[i], ordenDeColores[i]);
+    }, segundo * (i+1));
 
+    setTimeout(() =>{
+      eliminarClaseAElementoHtml($casilleros[i], ordenDeColores[i]);
+    }, segundo * (i+2) )
+  });
+};
 
 function crearNumeroRandom(casilleros) {
   let tamanioDeCasilleros = casilleros.length;
@@ -48,18 +52,15 @@ function rellenarVectorDeColores() {
   let cantidadRepetida;
   let numeroAleatorio;
 
-  
+  for (i = 0; i < $casilleros.length; ) {
+    numeroAleatorio = crearNumeroRandom(coloresParaCuadricula);
+    cantidadRepetida = buscarDuplas(numeroAleatorio, ordenDeColores);
 
-  for(i = 0; i<$casilleros.length;){
-    numeroAleatorio = crearNumeroRandom(coloresParaCuadricula)
-    cantidadRepetida = buscarDuplas(numeroAleatorio, ordenDeColores)
-
-    if(cantidadRepetida <= maximosRepetidos){
-      ordenDeColores.push(coloresParaCuadricula[numeroAleatorio])
-      i++
+    if (cantidadRepetida <= maximosRepetidos) {
+      ordenDeColores.push(coloresParaCuadricula[numeroAleatorio]);
+      i++;
     }
   }
-
 }
 
 function agregarClaseDeColorACuadricula(cuadricula, ordenDeColores) {
@@ -68,18 +69,22 @@ function agregarClaseDeColorACuadricula(cuadricula, ordenDeColores) {
   }
 }
 
-function cambiaColorABlanco(cuadricula, colores){
-  
-  cuadricula.classList.remove(colores)
-
+function cambiaColorABlanco(cuadricula, colores) {
+  cuadricula.classList.remove(colores);
 }
 
-function crearPatronDeCuadriculas() {  
-  rellenarVectorDeColores()
-  agregarClaseDeColorACuadricula($casilleros, ordenDeColores);
-  
+function crearPatronDeCuadriculas() {
+  rellenarVectorDeColores();
 }
 
 function turnoJugador() {
   console.log("estoy en la funcion");
+}
+
+function agregarClaseAElelementoHTML(elemento, clase) {
+  elemento.classList.add(clase);
+}
+
+function eliminarClaseAElementoHtml(elemento, clase) {
+  elemento.classList.remove(clase);
 }

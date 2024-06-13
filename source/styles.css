@@ -41,6 +41,10 @@
     background-color: black;
 }
 
+.gris{
+    background-color: gray;
+}
+
 .transicion{
 transition-duration: 1s;
 }

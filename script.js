@@ -98,12 +98,14 @@ function presentarPatronDeColores(){
     }, segundoParaEliminarClase);
   });
 }
+
 function bloquearJugador(){
 
   tablero.addEventListener('click', function(){
 
   })
 }
+
 function verificarPosiciones(primeraPosicion, segundaPosicion){
   let sonIguales;
   
@@ -117,6 +119,7 @@ function verificarPosiciones(primeraPosicion, segundaPosicion){
 
   return sonIguales;
 };
+
 function turnoJugador(){
 
   seleccionarPosicionDeTablero(tablero, $casilleros)

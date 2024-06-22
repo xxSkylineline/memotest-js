@@ -104,3 +104,16 @@ function bloquearJugador(){
 
   })
 }
+function verificarPosiciones(primeraPosicion, segundaPosicion){
+  let sonIguales;
+  
+  if(primeraPosicion == segundaPosicion){
+    sonIguales = true;
+  };
+
+  if(primeraPosicion != segundaPosicion){
+    sonIguales = false;
+  };
+
+  return sonIguales;
+};

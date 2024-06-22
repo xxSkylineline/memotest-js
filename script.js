@@ -161,8 +161,4 @@ function turnoJugador(){
 
   seleccionarPosicionDeTablero(tablero, $casilleros)
 
- 
-
-
- console.log("Llega hasta aca")
 }

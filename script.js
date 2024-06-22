@@ -14,6 +14,16 @@ let ordenDeJugador = [];
 
 document.querySelector("#iniciador").onclick = function (event) {
   document.querySelector("#iniciador").setAttribute("disabled", "");
+  
+  
+  let esVerdadero = presentarPatronDeColores();
+  
+  setTimeout(() => {
+    turnoJugador()
+  },segundo * $casilleros.length+2);
+  
+  
+  
 };
 
 function crearNumeroRandom(casilleros) {

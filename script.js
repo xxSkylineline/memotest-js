@@ -98,3 +98,9 @@ function presentarPatronDeColores(){
     }, segundoParaEliminarClase);
   });
 }
+function bloquearJugador(){
+
+  tablero.addEventListener('click', function(){
+
+  })
+}

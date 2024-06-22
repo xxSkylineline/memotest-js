@@ -102,6 +102,38 @@ function presentarPatronDeColores(){
 }
 
 
+function seleccionarPosicionDeTablero(nodo, vector){
+  esPar = 2
+  nodo.addEventListener('click', function(){
+    let cuadro = event.target;
+    let posicionCuadro;
+
+    for(let i = 0; i< vector.length; i++){
+
+      if(vector[i] == cuadro){
+        posicionCuadro = i
+      }
+    }
+    ordenDeJugador.push(posicionCuadro)
+
+    agregarClaseAElelementoHTML($casilleros[posicionCuadro], ordenDeColores[posicionCuadro])
+
+    if(ordenDeJugador.length == esPar){
+      let sonIguales = verificarPosiciones(ordenDeColores[ordenDeJugador[0]], ordenDeColores[ordenDeJugador[1]])
+     if(sonIguales == true){
+      agregarClaseAElelementoHTML($casilleros[ordenDeJugador[0]], "gris")
+      agregarClaseAElelementoHTML($casilleros[ordenDeJugador[1]], "gris")
+      ordenDeJugador=[]
+     }
+
+     if(sonIguales != true){
+      console.log("FIN DEL JUEGO")
+     }
+    }
+    console.log(posicionCuadro)
+  })
+
+  
 }
 
 function bloquearJugador(){

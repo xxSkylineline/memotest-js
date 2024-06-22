@@ -117,3 +117,12 @@ function verificarPosiciones(primeraPosicion, segundaPosicion){
 
   return sonIguales;
 };
+function turnoJugador(){
+
+  seleccionarPosicionDeTablero(tablero, $casilleros)
+
+ 
+
+
+ console.log("Llega hasta aca")
+}

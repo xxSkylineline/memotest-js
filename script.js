@@ -1,3 +1,4 @@
+const tablero = document.querySelector('.tablero')
 const $casilleros = document.querySelectorAll(".cuadro");
 const coloresParaCuadricula = [
   "rojo",
@@ -7,7 +8,7 @@ const coloresParaCuadricula = [
   "negro",
   "violeta",
 ];
-
+let segundo = 1000
 let ordenDeColores = [];
 let ordenDeJugador = [];
 

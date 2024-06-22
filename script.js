@@ -13,8 +13,6 @@ let ordenDeJugador = [];
 
 document.querySelector("#iniciador").onclick = function (event) {
   document.querySelector("#iniciador").setAttribute("disabled", "");
-
-  presentarPatronDeColores();
 };
 
 function crearNumeroRandom(casilleros) {
@@ -53,16 +51,6 @@ function rellenarVectorDeColores() {
   }
 }
 
-function agregarClaseDeColorACuadricula(cuadricula, ordenDeColores) {
-  for (i = 0; i < cuadricula.length; i++) {
-    cuadricula[i].classList.add(ordenDeColores[i]);
-  }
-}
-
-function cambiaColorABlanco(cuadricula, colores) {
-  cuadricula.classList.remove(colores);
-}
-
 function crearPatronDeCuadriculas() {
   rellenarVectorDeColores();
 }
@@ -82,6 +70,7 @@ function eliminarClaseAElementoHtml(elemento, clase) {
 
 function presentarPatronDeColores(){
   let segundo = 1000;
+  bloquearJugador()
   crearPatronDeCuadriculas(ordenDeColores);
 
   $casilleros.forEach((elemento, i) => {
@@ -97,6 +86,11 @@ function presentarPatronDeColores(){
       eliminarClaseAElementoHtml($casilleros[i], ordenDeColores[i]);
     }, segundoParaEliminarClase);
   });
+
+  return true;
+}
+
+
 }
 
 function bloquearJugador(){

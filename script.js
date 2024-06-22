@@ -70,7 +70,6 @@ function eliminarClaseAElementoHtml(elemento, clase) {
 
 
 function presentarPatronDeColores(){
-  let segundo = 1000;
   bloquearJugador()
   crearPatronDeCuadriculas(ordenDeColores);
 

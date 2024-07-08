@@ -10,6 +10,8 @@
     background-color: white;
     align-items: center;
     border: 4px solid #000;
+    transition-duration: 1s;
+    
 }
 
 .visible{
@@ -45,6 +47,4 @@
     background-color: gray;
 }
 
-.transicion{
-transition-duration: 1s;
-}
+

@@ -1,8 +1,32 @@
 {
+  "scripts": {
+    "empezar": "http-server",
+    "cypress-dev": "cypress open"
+  },
   "dependencies": {
     "bootstrap": "^5.3.3"
   },
   "devDependencies": {
-    "cypress": "^13.8.1"
-  }
+    "cypress": "^13.13.1"
+  },
+  "name": "memotest",
+  "description": "Repositorio de juego memotest realizado en JavaScript, html y bootstrap",
+  "version": "1.0.0",
+  "main": "cypress.config.js",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/xxSkylineline/memotest-js.git"
+  },
+  "keywords": [
+    "memotest",
+    "javascript",
+    "bootstrap",
+    "logica"
+  ],
+  "author": "xxSkylineline",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/xxSkylineline/memotest-js/issues"
+  },
+  "homepage": "https://github.com/xxSkylineline/memotest-js#readme"
 }
